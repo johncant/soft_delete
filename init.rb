@@ -1,1 +1,1 @@
-require 'soft_delete'
+require 'lib/soft_deletable'
