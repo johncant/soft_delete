@@ -2,12 +2,13 @@ soft _ delete
 ===========
 
 Add a column
-```ruby
+```
 deleted_at
-``` to your model
+```
+to your model
 
 Make a model soft deletable by calling
-```ruby
+```
 soft_deletable
 ```
  in your class definition
