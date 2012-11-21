@@ -1,4 +1,3 @@
-
 module SoftDeletable
 
   module InstanceMethods
@@ -13,8 +12,7 @@ module SoftDeletable
     end
 
     def soft_delete
-      puts "Soft deleting #{self.inspect}"
-      update_attribute :deleted_at, Time.now
+      update_column :deleted_at, Time.now
     end
 
     def soft_destroy
@@ -71,5 +69,4 @@ module SoftDeletable
   end
 end
 
-::ActiveRecord::Base.send(:include, ::SoftDeletable::Base)
-::ActiveSupport::TestCase.send(:include, ::SoftDeletable::TestCase)
+
