@@ -12,7 +12,7 @@ module SoftDeletable
     end
 
     def soft_delete
-      update_column :deleted_at, Time.now
+      update_column :deleted_at, Time.now unless new_record?
     end
 
     def soft_destroy
